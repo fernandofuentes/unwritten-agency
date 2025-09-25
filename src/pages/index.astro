@@ -1,5 +1,9 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import GlobalFooter from '../components/GlobalFooter.astro';
+import HomePageCTA from '../components/HomePageCTA.astro';
+import HomePageHero from '../components/HomePageHero.astro';
+import HomePageSection1 from '../components/HomePageSection1.astro';
+import HomePageSection2 from '../components/HomePageSection2.astro';
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,5 +11,9 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<Welcome />
+	<HomePageHero />
+  <HomePageSection1 />
+  <HomePageSection2 />
+  <HomePageCTA />
+  <GlobalFooter />
 </Layout>
