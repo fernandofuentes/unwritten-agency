@@ -1,0 +1,67 @@
+---
+interface Props {
+  city: string;
+}
+
+const { city } = Astro.props;
+
+const services = [
+  {
+    title: "Search Engine Optimization (SEO)",
+    description: `Boost your visibility in ${city} with our proven SEO strategies. We help local businesses rank higher in search results and attract more qualified leads.`,
+    icon: "🔍"
+  },
+  {
+    title: "Pay-Per-Click Advertising",
+    description: `Maximize your ROI with targeted PPC campaigns designed for the ${city} market. Get instant visibility and measurable results.`,
+    icon: "📊"
+  },
+  {
+    title: "Social Media Marketing",
+    description: `Connect with your ${city} audience on the platforms they use most. Build brand awareness and drive engagement with compelling content.`,
+    icon: "📱"
+  },
+  {
+    title: "Content Marketing",
+    description: "Create valuable content that attracts, educates, and converts your target audience. Establish your brand as an industry leader.",
+    icon: "✍️"
+  },
+  {
+    title: "Web Design & Development",
+    description: "Build a stunning, high-performing website that converts visitors into customers. Mobile-responsive and optimized for speed.",
+    icon: "💻"
+  },
+  {
+    title: "Email Marketing",
+    description: "Nurture leads and retain customers with strategic email campaigns. Personalized messages that drive action and build loyalty.",
+    icon: "📧"
+  }
+];
+---
+
+<section id="services" class="py-24 sm:py-32 bg-white">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+        Comprehensive Digital Marketing Services
+      </h2>
+      <p class="mt-6 text-lg leading-8 text-gray-600">
+        Everything your {city} business needs to succeed online, all under one roof.
+      </p>
+    </div>
+
+    <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+      {services.map((service) => (
+        <article class="flex flex-col items-start border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+          <div class="text-5xl mb-4">{service.icon}</div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            {service.title}
+          </h3>
+          <p class="text-base leading-7 text-gray-600">
+            {service.description}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

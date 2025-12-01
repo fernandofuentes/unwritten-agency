@@ -1,0 +1,39 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import GlobalNavigationMain from "../../components/GlobalNavigationMain";
+import LocationHero from "../../components/LocationHero.astro";
+import LocationServices from "../../components/LocationServices.astro";
+import LocationAbout from "../../components/LocationAbout.astro";
+import LocationWhyChoose from "../../components/LocationWhyChoose.astro";
+import LocationCTA from "../../components/LocationCTA.astro";
+import LocationContact from "../../components/LocationContact.astro";
+import GlobalFooter from "../../components/GlobalFooter.astro";
+
+const city = "Tomball, TX";
+const cityShort = "Tomball";
+const neighborhoods = "Downtown Tomball, Gleannloch Farms, Rosehill, Willow Creek, and Boudreaux";
+
+const pageTitle = `Digital Marketing Agency in ${city} | Unwritten Agency`;
+const pageDescription = `Professional digital marketing agency helping ${cityShort} businesses grow online. Expert SEO, PPC advertising, social media, and web design services. Serving ${neighborhoods}. Contact us today.`;
+const canonical = "/locations/digital-marketing-agency-tomball-tx";
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={canonical}>
+  <GlobalNavigationMain client:load />
+
+  <main>
+    <LocationHero city={city} neighborhoods={neighborhoods} />
+
+    <LocationServices city={cityShort} />
+
+    <LocationAbout city={cityShort} />
+
+    <LocationWhyChoose city={cityShort} />
+
+    <LocationCTA city={cityShort} />
+
+    <LocationContact city={cityShort} />
+  </main>
+
+  <GlobalFooter />
+</Layout>

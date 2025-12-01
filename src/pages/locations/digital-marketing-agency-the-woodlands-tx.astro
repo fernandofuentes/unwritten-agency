@@ -1,0 +1,39 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import GlobalNavigationMain from "../../components/GlobalNavigationMain";
+import LocationHero from "../../components/LocationHero.astro";
+import LocationServices from "../../components/LocationServices.astro";
+import LocationAbout from "../../components/LocationAbout.astro";
+import LocationWhyChoose from "../../components/LocationWhyChoose.astro";
+import LocationCTA from "../../components/LocationCTA.astro";
+import LocationContact from "../../components/LocationContact.astro";
+import GlobalFooter from "../../components/GlobalFooter.astro";
+
+const city = "The Woodlands, TX";
+const cityShort = "The Woodlands";
+const neighborhoods = "Grogan's Mill, Panther Creek, Indian Springs, Sterling Ridge, and Alden Bridge";
+
+const pageTitle = `Digital Marketing Agency in ${city} | Unwritten Agency`;
+const pageDescription = `Leading digital marketing agency serving ${cityShort} businesses. Expert SEO, PPC, social media, and web design services. Proudly serving ${neighborhoods}. Get your free consultation today.`;
+const canonical = "/locations/digital-marketing-agency-the-woodlands-tx";
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={canonical}>
+  <GlobalNavigationMain client:load />
+
+  <main>
+    <LocationHero city={city} neighborhoods={neighborhoods} />
+
+    <LocationServices city={cityShort} />
+
+    <LocationAbout city={cityShort} />
+
+    <LocationWhyChoose city={cityShort} />
+
+    <LocationCTA city={cityShort} />
+
+    <LocationContact city={cityShort} />
+  </main>
+
+  <GlobalFooter />
+</Layout>

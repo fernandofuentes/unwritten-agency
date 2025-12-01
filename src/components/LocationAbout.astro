@@ -1,0 +1,52 @@
+---
+interface Props {
+  city: string;
+}
+
+const { city } = Astro.props;
+---
+
+<section class="py-24 sm:py-32 bg-gray-50">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center">
+      <div>
+        <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          Your Trusted Digital Marketing Partner in {city}
+        </h2>
+        <p class="mt-6 text-lg leading-8 text-gray-600">
+          At Unwritten Agency, we understand the unique challenges and opportunities that businesses in {city} face. Our team of digital marketing experts combines local market knowledge with cutting-edge strategies to deliver measurable results.
+        </p>
+        <p class="mt-6 text-lg leading-8 text-gray-600">
+          We don't believe in one-size-fits-all solutions. Every business is different, and we take the time to understand your goals, your audience, and your competitive landscape before crafting a custom strategy designed specifically for your success.
+        </p>
+        <div class="mt-10">
+          <a
+            href="#contact"
+            class="rounded-md bg-gray-900 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-gray-800 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+          >
+            Schedule a Consultation
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl p-8 shadow-md">
+          <div class="text-4xl font-bold text-gray-900 mb-2">10+</div>
+          <div class="text-sm text-gray-600">Years of Experience</div>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-md">
+          <div class="text-4xl font-bold text-gray-900 mb-2">500+</div>
+          <div class="text-sm text-gray-600">Successful Campaigns</div>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-md">
+          <div class="text-4xl font-bold text-gray-900 mb-2">98%</div>
+          <div class="text-sm text-gray-600">Client Satisfaction</div>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-md">
+          <div class="text-4xl font-bold text-gray-900 mb-2">$50M+</div>
+          <div class="text-sm text-gray-600">Revenue Generated</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,49 @@
+---
+interface Props {
+  city: string;
+  neighborhoods?: string;
+}
+
+const { city, neighborhoods } = Astro.props;
+---
+
+<section class="relative isolate overflow-hidden">
+  <div class="absolute inset-0 -z-10">
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      class="absolute inset-0 w-full h-full object-cover"
+    >
+      <source src="/hero-bkg.mp4" type="video/mp4" />
+    </video>
+    <div class="absolute inset-0 bg-black/50"></div>
+  </div>
+
+  <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <h1 class="text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl drop-shadow-lg">
+        Digital Marketing Agency in {city}
+      </h1>
+      <p class="mt-6 text-xl leading-8 text-white/95 drop-shadow-md">
+        Driving growth for businesses in {city} through data-driven digital marketing strategies.
+        {neighborhoods && <span>Proudly serving {neighborhoods} and the surrounding areas.</span>}
+      </p>
+      <div class="mt-10 flex items-center justify-center gap-x-6">
+        <a
+          href="#contact"
+          class="rounded-md bg-white px-6 py-3 text-base font-semibold text-gray-900 shadow-lg hover:bg-gray-100 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        >
+          Get Started
+        </a>
+        <a
+          href="#services"
+          class="text-base font-semibold text-white hover:text-white/80 transition-colors"
+        >
+          Our Services <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

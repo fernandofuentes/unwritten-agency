@@ -1,0 +1,39 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import GlobalNavigationMain from "../../components/GlobalNavigationMain";
+import LocationHero from "../../components/LocationHero.astro";
+import LocationServices from "../../components/LocationServices.astro";
+import LocationAbout from "../../components/LocationAbout.astro";
+import LocationWhyChoose from "../../components/LocationWhyChoose.astro";
+import LocationCTA from "../../components/LocationCTA.astro";
+import LocationContact from "../../components/LocationContact.astro";
+import GlobalFooter from "../../components/GlobalFooter.astro";
+
+const city = "Houston, TX";
+const cityShort = "Houston";
+const neighborhoods = "The Galleria, Midtown, Downtown, Energy Corridor, Memorial, and the Museum District";
+
+const pageTitle = `Digital Marketing Agency in ${city} | Unwritten Agency`;
+const pageDescription = `Award-winning digital marketing agency serving ${cityShort} businesses. Full-service SEO, PPC, social media marketing, and web development. Trusted by companies across ${neighborhoods}. Get started today.`;
+const canonical = "/locations/digital-marketing-agency-houston-tx";
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={canonical}>
+  <GlobalNavigationMain client:load />
+
+  <main>
+    <LocationHero city={city} neighborhoods={neighborhoods} />
+
+    <LocationServices city={cityShort} />
+
+    <LocationAbout city={cityShort} />
+
+    <LocationWhyChoose city={cityShort} />
+
+    <LocationCTA city={cityShort} />
+
+    <LocationContact city={cityShort} />
+  </main>
+
+  <GlobalFooter />
+</Layout>

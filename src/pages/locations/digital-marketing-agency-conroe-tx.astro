@@ -1,0 +1,39 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import GlobalNavigationMain from "../../components/GlobalNavigationMain";
+import LocationHero from "../../components/LocationHero.astro";
+import LocationServices from "../../components/LocationServices.astro";
+import LocationAbout from "../../components/LocationAbout.astro";
+import LocationWhyChoose from "../../components/LocationWhyChoose.astro";
+import LocationCTA from "../../components/LocationCTA.astro";
+import LocationContact from "../../components/LocationContact.astro";
+import GlobalFooter from "../../components/GlobalFooter.astro";
+
+const city = "Conroe, TX";
+const cityShort = "Conroe";
+const neighborhoods = "Downtown Conroe, April Sound, River Plantation, Del Lago, and Wedgewood";
+
+const pageTitle = `Digital Marketing Agency in ${city} | Unwritten Agency`;
+const pageDescription = `Top-rated digital marketing agency for ${cityShort} businesses. Comprehensive SEO, PPC, social media marketing, and web design services. Serving ${neighborhoods}. Schedule your free consultation.`;
+const canonical = "/locations/digital-marketing-agency-conroe-tx";
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={canonical}>
+  <GlobalNavigationMain client:load />
+
+  <main>
+    <LocationHero city={city} neighborhoods={neighborhoods} />
+
+    <LocationServices city={cityShort} />
+
+    <LocationAbout city={cityShort} />
+
+    <LocationWhyChoose city={cityShort} />
+
+    <LocationCTA city={cityShort} />
+
+    <LocationContact city={cityShort} />
+  </main>
+
+  <GlobalFooter />
+</Layout>
